@@ -3,11 +3,13 @@ defmodule McData.Mixfile do
 
   def project do
     [app: :mc_data,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     package: package,
+     description: description]
   end
 
   # Configuration for the OTP application
@@ -27,10 +29,22 @@ defmodule McData.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:poison, "~> 2.0"},
-     {:json_minecraft_data,
-       github: "PrismarineJS/minecraft-data", 
-       ref: "a13abc7f468698e5e37592dca6faefdcd6527cb4", # 2016-03-25
-       compile: false, app: false}]
+    [{:poison, "~> 2.0"}]
   end
+
+  defp description do
+    """
+    Provides access to data from the game Minecraft.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "priv", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["hansihe"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/hansihe/elixir_mc_data"},
+    ]
+  end
+
 end

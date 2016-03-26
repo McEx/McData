@@ -3,7 +3,9 @@ defmodule McData.Util do
   # TODO: Make settable from config file
   def default_version, do: "1.8"
 
-  def mc_data_repo_root, do: Mix.Project.deps_paths[:json_minecraft_data]
+  def mc_data_repo_root do
+    to_string(:code.priv_dir(:mc_data)) <> "/minecraft-data"
+  end
 
   def mc_data_root, do: mc_data_repo_root <> "/data"
 
