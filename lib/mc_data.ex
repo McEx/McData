@@ -1,0 +1,2 @@
+defmodule McData do
+end

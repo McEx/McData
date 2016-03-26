@@ -1,0 +1,2 @@
+%{"json_minecraft_data": {:git, "https://github.com/PrismarineJS/minecraft-data.git", "a13abc7f468698e5e37592dca6faefdcd6527cb4", [ref: "a13abc7f468698e5e37592dca6faefdcd6527cb4"]},
+  "poison": {:hex, :poison, "2.1.0"}}
