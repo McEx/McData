@@ -43,7 +43,7 @@ defmodule McData.Mixfile do
       files: ["lib", "priv", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["hansihe"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/hansihe/elixir_mc_data"},
+      links: %{"GitHub" => "https://github.com/McEx/McData"},
     ]
   end
 
