@@ -1,7 +1,6 @@
 defmodule McData.Util do
 
-  # TODO: Make settable from config file
-  def default_version, do: "1.8"
+  def default_version, do: Application.get_env!(:mc_data, :version)
 
   def mc_data_repo_root do
     to_string(:code.priv_dir(:mc_data)) <> "/minecraft-data"
